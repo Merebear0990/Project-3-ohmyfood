@@ -1,13 +1,18 @@
-html {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  
-  *,
-  *:before,
-  *:after {
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
-    box-sizing: inherit;
-  }
+@import 'layout/homepage'
+
+//  .loading {
+//     background-color: purple;
+
+//  }
+
+//  .header__title {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+
+// }
+
+// .header__logo {
+//     padding: 15px;
+//     margin: 0;
+// }

@@ -1,0 +1,12 @@
+.loading {
+    width: 3vh;
+    height: 3vh;
+    display: flex;
+    justify-content: space-evenly;
+&__bar {
+    background-color: firebrick;
+    height: 100%;
+    width: 3vh;
+}
+}
+
