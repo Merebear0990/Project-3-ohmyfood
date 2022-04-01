@@ -1,12 +1,67 @@
+$bar-clr: #99E2D3;
+$bar-clr-inv: #FF79DA;
+$bar-clr-fill: #9356DC;
+$size: 3vh;
+$bar-num: 5;
+$anim-dur: 1000ms;
+$anim-delay:$anim-dur / $bar-num;
+
+
 .loading {
-    width: 3vh;
-    height: 3vh;
     display: flex;
     justify-content: space-evenly;
+    width: $size*10;
+    height: $size*7.5;
 &__bar {
-    background-color: firebrick;
+    display: flex;
+    align-items: flex-end;
     height: 100%;
-    width: 3vh;
-}
+    width: $size;
+    background-color: darken($bar-clr, 8%);
+    box-shadow: inset 0 0 4px darken(gray, 16%);
+    transform: translateZ(0);
+    border-radius: 8px;
+    overflow: hidden;
+    animation: bars $anim-dur backwards infinite ease-in-out alternate;
+    &:before {
+        content: '';
+        width: 100%;
+        height: 30%;
+        background: linear-gradient($bar-clr-fill, darken($bar-clr-fill, 16%));
+        animation: loading 1.8s infinite;
+    }
+    @for $i from 1 through $bar-num {
+        &--#{$i} {
+            animation-delay: $anim-delay * $i;
+            &:hover {
+                animation-play-state: paused;
+            }
+        }
+       &--#{$i}-inv {
+           animation-delay: $anim-delay * $i;
+           animation-direction: alternate-reverse;
+           background-color: $bar-clr-inv;
+           &:hover {
+               animation-play-state: paused;
+               
+           }
+       }
+  }
+ }
 }
 
+
+@keyframes bars {
+    0% { 
+        transform: scaleY(0.5);
+    }  
+    100% { 
+        transform: scaleY(1.0);
+    }
+}
+
+@keyframes loading {
+    0% { height: 30%; }
+    40%, 70% {height: 100%;}
+    100% {height: 30%}
+}
