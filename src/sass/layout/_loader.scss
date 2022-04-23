@@ -5,11 +5,26 @@ $size: 3vh;
 $bar-num: 5;
 $anim-dur: 1000ms;
 $anim-delay:$anim-dur / $bar-num;
+$anim-delay: 100ms;
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: disappear 0s 4s both;
+
+}
 
 
 .loading {
     display: flex;
     justify-content: space-evenly;
+    align-items: flex-end;
     width: $size*10;
     height: $size*7.5;
 &__bar {
@@ -17,19 +32,25 @@ $anim-delay:$anim-dur / $bar-num;
     align-items: flex-end;
     height: 100%;
     width: $size;
-    background-color: darken($bar-clr, 8%);
+    transform-origin: left;
+    transform: scaleX(0);
+    background-color: darken($bar-clr-fill, 8%);
     box-shadow: inset 0 0 4px darken(gray, 16%);
-    transform: translateZ(0);
     border-radius: 8px;
     overflow: hidden;
     animation: bars $anim-dur backwards infinite ease-in-out alternate;
+    
     &:before {
         content: '';
         width: 100%;
         height: 30%;
-        background: linear-gradient($bar-clr-fill, darken($bar-clr-fill, 16%));
-        animation: loading 1.8s infinite;
+        background: linear-gradient($bar-clr-inv, darken($bar-clr, 16%));
+        animation: loading 1.8s 10;
+        animation-name: loading;
+        animation-duration: 1.8s;
+        animation-iteration-count: infinite;
     }
+
     @for $i from 1 through $bar-num {
         &--#{$i} {
             animation-delay: $anim-delay * $i;
@@ -40,23 +61,27 @@ $anim-delay:$anim-dur / $bar-num;
        &--#{$i}-inv {
            animation-delay: $anim-delay * $i;
            animation-direction: alternate-reverse;
-           background-color: $bar-clr-inv;
+           background-color: $bar-clr-fill;
            &:hover {
                animation-play-state: paused;
                
            }
        }
+    }
   }
- }
+
 }
 
 
 @keyframes bars {
     0% { 
         transform: scaleY(0.5);
+        
+
     }  
     100% { 
         transform: scaleY(1.0);
+        transform: translateY(0%);
     }
 }
 
@@ -64,4 +89,22 @@ $anim-delay:$anim-dur / $bar-num;
     0% { height: 30%; }
     40%, 70% {height: 100%;}
     100% {height: 30%}
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+        z-index: 10000;
+        background-color: rgba(255,255,255,0.5);
+      }
+      
+      95% {
+        opacity: 0.9;   
+      }
+      
+      100% {
+        opacity: 0;
+        transform: scale(0);
+        z-index: -1;
+      }
 }

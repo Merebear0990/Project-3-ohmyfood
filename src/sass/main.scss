@@ -1,19 +1,11 @@
-@import 'layout/homepage' ;
-@import 'layout/loader' ;
-@import './utils/variables';
-//  .loading {
-//     background-color: purple;
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "layout/homepage";
+@import "layout/loader";
+@import "./layout/footer";
+@import "./layout/homepage-media";
+@import "./layout/menu-media";
+@import "./layout/menu";
+@import "./layout/homepage";
+@import "./utils/typography";
 
-//  }
-
-//  .header__title {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-
-// }
-
-// .header__logo {
-//     padding: 15px;
-//     margin: 0;
-// }

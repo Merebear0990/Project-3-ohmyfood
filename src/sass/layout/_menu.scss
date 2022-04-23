@@ -1,0 +1,11 @@
+@media screen and (min-width: 0px) {
+    * {
+        box-sizing: border-box;
+
+    }
+      
+    .palette-menu-header {
+       @include center;
+       
+    }
+}
