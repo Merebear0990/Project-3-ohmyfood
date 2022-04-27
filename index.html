@@ -1,106 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/a1153c9a51.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet"/>
-        <link href="styles/main.css" rel="stylesheet" type="text/css">
-        <title>Oh my food!</title>
 
-    </head>
-    <body>
-        <div class="loading-container">       
-            <div class="loading">
-                <div class="loading__bar loading__bar--1"></div>
-                <div class="loading__bar loading__bar--2"></div>
-                <div class="loading__bar loading__bar--3"></div>
-                <div class="loading__bar loading__bar--4"></div>
-                <div class="loading__bar loading__bar--5"></div>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a1153c9a51.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap"
+        rel="stylesheet" />
+    <link href="styles/main.css" rel="stylesheet" type="text/css">
+    <title>Oh my food!</title>
 
-            <div class="loading">
-                <div class="loading__bar loading__bar--1-inv"></div>
-                <div class="loading__bar loading__bar--2-inv"></div>
-                <div class="loading__bar loading__bar--3-inv"></div>
-                <div class="loading__bar loading__bar--4-inv"></div>
-                <div class="loading__bar loading__bar--5-inv"></div>
+</head>
+
+<body>
+    <div class="loading-container">
+        <div class="loading">
+            <div class="loading__bar loading__bar--1"></div>
+            <div class="loading__bar loading__bar--2"></div>
+            <div class="loading__bar loading__bar--3"></div>
+            <div class="loading__bar loading__bar--4"></div>
+            <div class="loading__bar loading__bar--5"></div>
+        </div>
+
+        <div class="loading">
+            <div class="loading__bar loading__bar--1-inv"></div>
+            <div class="loading__bar loading__bar--2-inv"></div>
+            <div class="loading__bar loading__bar--3-inv"></div>
+            <div class="loading__bar loading__bar--4-inv"></div>
+            <div class="loading__bar loading__bar--5-inv"></div>
+        </div>
+    </div>
+
+    <header>
+        <div class="header__title">
+            <img src="images/logo/ohmyfood.png" alt="logo" class="header__logo" />
+        </div>
+
+        <div class="header__location">
+            <div class="location__wrapper">
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" placeholder="Paris, Belleville" class="location__search" />
             </div>
         </div>
 
-        <header>
-           <div class="header__title">
-               <img src="images/logo/ohmyfood.png" alt="logo" class="header__logo"/>
-           </div>
+        <div class="booking">
+            <div class="booking__wrapper">
+                <div class="booking__text">
+                    <h2 class="booking__title">Book the menu you like</h2>
+                    <p class="booking__info">Discover top-of-the-art restaurants we picked for you</p>
+                </div>
+                <button type="button" class="explore-btn">Explore our restaurants</button>
+            </div>
+        </div>
 
-           <div class="header__location">
-               <div class="location__wrapper">
-            <i class="fas fa-map-marker-alt"></i>
-            <input type="text" placeholder="Paris, Belleville" class="location__search"/>
-             </div>
-           </div>
+    </header>
 
-           <div class="booking">
-               <div class="booking__wrapper">
-                   <div class="booking__text">
-                       <h2 class="booking__title">Book the menu you like</h2>
-                       <p class="booking__info">Discover top-of-the-art restaurants we picked for you</p>
-                   </div>
-                   <button type="button" class="explore-btn">Explore our restaurants</button>
-               </div>
-           </div>
+    <main>
 
-           </header>
-
-           <div class="explanation">
+        <div class="explanation">
             <h2 class="explanation__title">How it works</h2>
-            
+
             <div class="explanation__wrapper">
 
-             <button class="explanation__buttons" type="button">
-                 <span class="explanation-number">1</span>
-                 <i class="fas fa-mobile-alt explanation__icon"></i>
-                 <span>Choose a restaurant</span>
-             </button>
-             
-             <button class="explanation__buttons" type="button">
-                 <span class="explanation-number">2</span>
-                 <i class="fas fa-list explanation__icon"></i>
-                 <span>Create your menu</span>
-             </button>
-                
-             <button class="explanation__buttons" type="button">
-                 <span class="explanation-number">3</span>
-                 <i class="fas fa-store explanation__icon"></i>
-                 <span>Go enjoy it at the restaurant</span>
-             </button>
+               <button class="explanation__buttons" type="button">
+                   <span class="explanation-number">1</span>
+                    <i class="fas fa-mobile-alt explanation__icon"></i>
+                    <span>Choose a restaurant</span>
+                </button>
+
+                <button class="explanation__buttons" type="button">
+                    <span class="explanation-number">2</span>
+                    <i class="fas fa-list explanation__icon"></i>
+                    <span>Create your menu</span>
+                </button>
+
+                <button class="explanation__buttons" type="button">
+                    <span class="explanation-number">3</span>
+                    <i class="fas fa-store explanation__icon-3"></i>
+                    <span>Go enjoy it at the restaurant</span>
+                </button>
 
             </div>
         </div>
 
         <div class="restaurants">
-            <div class="rest__wrapper">
-                <h2 class="rest__title">Restaurants</h2>
-               
-            <div class="restaurant__container">
-                <div class="restaurant__card">
-                   <a href="./full-palette.html"><img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="restaurant__card-img-1" id="palette" alt="The Full Palette"/></a>
-                    <div class="rest__card-label">New</div>
-                    <div class="restaurant__card-info">
-                        <h2>The Full Palette</h2>
-                        <h4>New York</h4>
+            <div class="restaurants__wrapper">
+                <h2 class="restaurants__title">Restaurants</h2>
+
+                <div class="restaurants__container">
+                    <div class="restaurants__card">
+                        <a href="./full-palette.html"><img
+                                src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                                class="restaurants__card-img-1" id="palette" alt="The Full Palette" />
+                            <div class="restaurants__card-label">New</div>
+                            <div class="restaurants__card-info">
+                                <h2>The Full Palette</h2>
+                                <h4>New York</h4>
+                            </div>
+                            <div class="restaurants__card-icon">
+                                <i class="far fa-heart outline"></i>
+                                <i class="fas fa-heart solid"></i>
+                            </div>
+                    </div></a>
+
+                    <div class="restaurants__card">
+                        <a href="./full-palette.html"><img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                                class="restaurants__card-img-2" alt="The Enchanted Plate" />
+                            <div class="restaurants__card-label">New</div>
+                            <div class="restaurants__card-info">
+                                <h2>The Enchanted Plate</h2>
+                                <h4>New York</h4>
+                            </div>
+
+                            <div class="restaurants__card-icon">
+                                <i class="far fa-heart outline"></i>
+                                <i class="fas fa-heart solid"></i>
+                            </div>
                     </div>
-                    <div class="restaurant__card-icon">
-                        <i class="far fa-heart outline"></i>
-                        <i class="fas fa-heart solid"></i>
-                    </div>
+
+                    <div class="restaurants__card">
+                        <a href="./full-palette.html"><img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                                class="restaurants__card-img-3" alt="Bastille" />
+                            <div class="restaurants__card-info">
+                                <h2>Bastille</h2>
+                                <h4>New York</h4>
+                            </div>
+                            <div class="restaurants__card-icon">
+                                <i class="far fa-heart outline"></i>
+                                <i class="fas fa-heart solid"></i>
+                            </div>
+                    </div></a>
+
+                    <div class="restaurants__card">
+                        <a href="./full-palette.html"><img
+                                src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                                class="restaurants__card-img-4" alt="Le Gourmand" />
+                            <div class="restaurants__card-info">
+                                <h2>Le Gourmand</h2>
+                                <h4>New York</h4>
+                            </div>
+                            <div class="restaurants__card-icon">
+                                <i class="far fa-heart outline"></i>
+                                <i class="fas fa-heart solid"></i>
+                            </div>
+                    </div></a>
                 </div>
             </div>
 
 
-            </div>
         </div>
-        
-    </body>
+
+        <footer class="footer">
+            <div class="footer__container">
+                <h2 class="footer__title">ohmyfood</h2>
+            </div>
+
+            <ul class="footer__navigation">
+                <li class="footer__item"><a href="#"><i class="fas fa-utensils"></i>Suggest a restaurant</a></li>
+                <li class="footer__item"><a href="#"><i class="fas fa-hands-helping"></i>Become a partner</a></li>
+                <li class="footer__item"><a href="#">Legal</a></li>
+                <li class="footer__item" id="footer_item-4"><a href="mailto:nowhere@mozilla.org">Contact</a></li>
+
+            </ul>
+        </footer>
+
+
+</body>
+
 </html>
