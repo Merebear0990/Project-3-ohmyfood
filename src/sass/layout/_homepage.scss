@@ -24,7 +24,7 @@
       font-weight: 700;
       font-size: 16px;
       background-color: lightgray;
-      width: 100vw;
+      width: 100%;
       padding: 3px;
       box-shadow: inset 1px 5px 14px -14px gray;
 
@@ -58,7 +58,6 @@
 
     &__wrapper {
       display: flex;
-      flex-direction: column;
       align-items: center;
       background-color: #eaeaea;
     }
@@ -92,7 +91,6 @@
 
     &__wrapper {
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
       width: 100%;
@@ -107,7 +105,7 @@
     }
 
     &__buttons {
-      background-color: #eaeaea;
+      background-color: #ede6f3;
       position: relative;
       border: none;
       padding: 20px;
@@ -126,13 +124,9 @@
     &__icon-3 {
       padding: 0 10px;
       width: 30px;
-      color: #9356dc;
+      color: $primary-clr;
     }
-
-    
   }
-
-  
 
   span {
     display: inline;
@@ -145,21 +139,20 @@
     height: 20px;
     text-align: center;
     border-radius: 100px;
-    background-color: #9356dc;
+    background-color: $primary-clr;
     position: absolute;
     left: -2px;
   }
 
   .explanation__buttons:hover {
-    background-color: #d4bae4;
+    background-color: #d7b1ee;
     .explanation__icon {
-      color: #9356dc;
+      color: $primary-clr;
     }
   }
 
   .restaurants {
     background-color: #eaeaea;
-  
 
     &__wrapper {
       display: flex;
@@ -167,37 +160,26 @@
     }
 
     &__title {
-      font-size: 100%;
-      font-weight: 100;
-      margin-top: 0%;
-      margin-bottom: 10px;
-      padding: 30px;
-    }
+      padding: 20px;
+      margin: 0;
 
-    &__container {
-      display: flex;
-      flex-direction: column;
-      width: 80%;
     }
 
     &__card {
       position: relative;
       background-color: #fff;
-      margin-bottom: 20px;
+      margin-left: 5%;
+      margin-bottom: 30px;
       border-radius: 15px;
       height: auto;
       box-shadow: 2px 5px 5px lightgray;
-      margin-left: 35px;
-      width: 100%;
-
     }
 
     &__card-info {
-      margin-left: 10px;
-      padding: 10px 0 15px 0;
-      
+      margin-left: 5px;
+      padding: 5px 0 15px 0;
     }
-    
+
     a {
       text-decoration: none;
       &:visited {
@@ -218,8 +200,6 @@
       font-family: "Roboto", sans-serif;
     }
 
-   
-
     &__card-img-1,
     &__card-img-2,
     &__card-img-3,
@@ -237,7 +217,7 @@
         filter: brightness(75%);
         color: white;
       }
-    } 
+    }
 
     &__card-label {
       background-color: #99e2d0;
@@ -268,7 +248,7 @@
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      transition: opacity 2000ms;
+      transition: opacity 3000ms;
     }
 
     .restaurants__card-icon:hover .solid {
@@ -277,17 +257,18 @@
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      transition: opacity 1000ms;
+      transition: opacity 3000ms;
     }
 
     .outline {
       position: absolute;
       opacity: 100%;
-      transition: opacity 2000ms;
+      transition: opacity 3000ms;
     }
+
     .restaurants__card-icon:hover .outline {
       opacity: 0;
-      transition: opacity 2000ms;
+      transition: opacity 3000ms;
     }
   }
 }

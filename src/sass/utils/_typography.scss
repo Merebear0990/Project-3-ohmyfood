@@ -2,8 +2,18 @@
     font-family: $font-text;
 }
 
+h1 {
+    font-family: $font-title;
+}
+
 h2 {
     font-family: $font-text;
+}
+
+h3 {
+    font-family: $font-text;
+    text-transform: uppercase;
+    font-size: 14px;
 }
 
 p {
@@ -12,4 +22,12 @@ p {
 
 .button {
     font-family: $font-text;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    &:visited {
+        color: black;
+    }
 }
