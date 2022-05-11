@@ -157,6 +157,7 @@
     &__wrapper {
       display: flex;
       flex-direction: column;
+     
     }
 
     &__title {
@@ -176,7 +177,7 @@
     }
 
     &__card-info {
-      margin-left: 5px;
+      margin-left: 10px;
       padding: 5px 0 15px 0;
     }
 
@@ -210,8 +211,6 @@
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
       object-fit: cover;
-      object-position: left bottom;
-      text-decoration: none;
 
       &:hover {
         filter: brightness(75%);

@@ -147,8 +147,6 @@
     }
 
     .menu__main-icon {
-        display: flex;
-        flex-direction: row-reverse;
         top: 6.5%;
         right: 97.2%;
     }
@@ -180,7 +178,7 @@
     }
 
     .menu__price {
-        padding: 5px 8px 8px 50px;
+        padding: 5px 8px 8px 10px;
     }
 
     .menu__card:hover {

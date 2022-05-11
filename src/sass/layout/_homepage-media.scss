@@ -75,7 +75,7 @@
        }
 
       &__card-icon {
-          right: 14%;
+          right: 13.5%;
           top: 77%;
       } 
    }   
@@ -142,12 +142,14 @@
         }
 
         &__card-img-1 {
-            object-position: 0px -150px;
+            object-position: 0px -165px;
+
         }
 
         &__card-img-2 {
             object-position: 0px -330px;
         }
+
 
         &__card-img-3 {
             object-position: 0px -175px;
@@ -165,6 +167,7 @@
 }
 
 @media screen and (min-width: 993px) {
+
     .header__logo {
         height: 100px;
         width: 28%;
@@ -215,10 +218,8 @@
 
        &__container {
            display: flex;
-           flex-direction: row;
            flex-wrap: wrap;
            width: 100%;
-           margin: 0%;
            align-content: space-between;
            justify-content: center;
        }
@@ -237,8 +238,8 @@
        &__card-img-2,
        &__card-img-3,
        &__card-img-4 {
-           height: 250px;
-           object-fit: cover;
+           height: 150px;
+           
        }
 
        &__card-img-1 {
@@ -255,8 +256,8 @@
        }
 
        &__card-icon {
-           top: 77%;
-           right: 10%;
+           top: 76.8%;
+           right: 9.5%;
        }
    }
 }
