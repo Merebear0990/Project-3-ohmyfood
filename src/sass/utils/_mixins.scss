@@ -29,3 +29,17 @@
     background: linear-gradient(to bottom right, $secondary-clr, $primary-clr);
 }
 
+@mixin tablet {
+    @media only screen and (min-width: $breakpoint-tablet) {
+        @content;
+    }
+
+
+}
+
+@mixin desktop {
+    @media only screen and (min-width: $breakpoint-desktop) {
+        @content;
+    }
+}
+

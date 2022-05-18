@@ -105,7 +105,7 @@
     }
 
     &__buttons {
-      background-color: #ede6f3;
+      background-color: #f7f7f7;
       position: relative;
       border: none;
       padding: 20px;
@@ -114,6 +114,10 @@
       box-shadow: 2px 2px 2px gray;
       width: 80%;
       margin: 0 0 15px 15px;
+
+      &--emphasized {
+        background-color: #ede6f3;
+      }
     }
 
     &__icon {
@@ -158,11 +162,32 @@
       display: flex;
       flex-direction: column;
      
+     
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include tablet {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      @include desktop {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
     }
 
     &__title {
       padding: 20px;
       margin: 0;
+      
 
     }
 
@@ -170,6 +195,7 @@
       position: relative;
       background-color: #fff;
       margin-left: 5%;
+      width: 350px;
       margin-bottom: 30px;
       border-radius: 15px;
       height: auto;
