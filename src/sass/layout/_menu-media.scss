@@ -19,35 +19,7 @@
        top: 17%;
    }
 
-   .solid {
-       position: absolute;
-       opacity: 0;
-       background: linear-gradient(to top, #FF79DA, #9356DC);
-       background-clip: text;
-       -webkit-background-clip: text;
-       -webkit-text-fill-color: transparent;
-       transition: opacity 3000ms;
-   }
 
-   .menu__main-icon:hover .solid {
-       opacity: 100%;
-       background: linear-gradient(to #FF79DA, #9356DC);
-       background-clip: text;
-       -webkit-background-clip: text;
-       -webkit-text-fill-color:transparent;
-       transition: opacity 3000ms;
-   }
-
-   .outline {
-       position: absolute;
-       opacity: 100%;
-       transition: opacity 3000ms;
-   }
-
-   .menu__main-icon:hover .outline {
-       opacity: 0;
-       transition: opacity 3000ms;
-   }
 
    .menu__options-title {
        margin: 30px 0 20px 18px;
@@ -154,13 +126,13 @@
     .menu__options {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 
     .menu__entrees,
     .menu_main-dish,
     .menu__dessert {
-        width: 100%;
+        width: 400px;
     }
 
     .menu__options-title {
@@ -169,7 +141,7 @@
     }
 
     .menu__card {
-        width: 90%;
+        width: 100px;
         margin-left: 35px;
     }
 
@@ -178,7 +150,7 @@
     }
 
     .menu__price {
-        padding: 5px 8px 8px 10px;
+        padding: 5px 8px 8px 32px;
     }
 
     .menu__card:hover {

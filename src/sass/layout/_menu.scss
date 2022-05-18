@@ -1,7 +1,6 @@
 @media screen and (min-width: 0px) {
     * {
         box-sizing: border-box;
-    
     }
 
     .menu__header {
@@ -9,7 +8,6 @@
 
         .menu__return {
             display: inline-block;
-            
         }
 
         i {
@@ -24,9 +22,8 @@
     }
 
     .menu__container {
-        position: relative;
-        background-color: #EAEAEA;
-
+        // position: relative;
+        background-color: #eaeaea;
     }
 
     .menu__img {
@@ -40,152 +37,175 @@
         font-size: 14px;
     }
 
-   .menu__main-icon {
-       display: flex;
-       font-size: 20px;
-       gap: 100px
-       
-   } 
+    .menu__main-icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        font-size: 20px;
+    }
 
-   .menu__options-title {
-       font-weight: 400;
-       padding-bottom: 3px;
-       border-bottom: solid 3px;
-       border-image: linear-gradient(to right, #99e2d0 10%, #EAEAEA 10%) 100% 1;
-   }
+    .solid {
+        position: absolute;
+        opacity: 0;
+        background: linear-gradient(to top, #FF79DA, #9356DC);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: opacity 3000ms;
+    }
+ 
+    .menu__main-icon:hover .solid {
+        opacity: 100%;
+        background: linear-gradient(to #FF79DA, #9356DC);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color:transparent;
+        transition: opacity 3000ms;
+    }
+ 
+    .outline {
+        position: absolute;
+        opacity: 100%;
+        transition: opacity 3000ms;
+    }
+ 
+    .menu__main-icon:hover .outline {
+        opacity: 0;
+        transition: opacity 3000ms;
+    }
 
-   .menu__card {
-       display: flex;
-       width: 330px;
-       border-radius: 10px;
-       background-color: #fff;
-       overflow: hidden;
-       margin-bottom: 12px;
-       box-shadow: 5px 5px 2px gray;
-       animation: appear ease-in-out 0.9s;
+    .menu__options-title {
+        font-weight: 400;
+        padding-bottom: 3px;
+        border-bottom: solid 3px;
+        border-image: linear-gradient(to right, #99e2d0 10%, #eaeaea 10%) 100% 1;
+    }
 
-   }
+    .menu__card {
+        display: flex;
+        width: 330px;
+        padding: 0;
+        border-radius: 10px;
+        background-color: #fff;
+        overflow: hidden;
+        margin-bottom: 12px;
+        box-shadow: 5px 5px 2px gray;
+        animation: appear ease-in-out 0.9s;
+    }
 
-   .menu__price {
-       display: flex;
-       font-weight: bold;
-       align-items: flex-end;
-       width: 25px;
-       
-   }
+    .menu__price {
+        display: flex;
+        font-weight: bold;
+        align-items: flex-end;
+        width: 25%;
+    }
 
-   .menu__text {
-       display: inline-block;
-       flex: none;
-       transition: width 1s;
-       
-   }
+    .menu__text {
+        display: inline-block;
+        flex: none;
+        transition: width 1s;
+    }
 
-   .menu__item {
-       display: inline-block;
-    //    width: 100%;
-       margin-left: 5px;
-       font-size: 16px;
-       font-weight: 500;
-       padding: 10px 5px 5px 5px;
-       overflow: hidden;
-       white-space: nowrap;
-       text-overflow: ellipsis;
-    
-   }
+    .menu__item {
+        display: inline-block;
+        width: 100%;
+        margin-left: 5px;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 10px 5px 5px 5px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
 
-   .menu__description {
-       display: inline-block;
-       width: 300px;
-       margin-left: 5px;
-       padding: 0 5px 8px 5px;
-       font-weight: 300;
-       overflow: hidden;
-       white-space: nowrap;
-       text-overflow: ellipsis;
-   }
+    .menu__description {
+        display: inline-block;
+        width: 100%;
+        margin-left: 5px;
+        padding: 0 5px 8px 5px;
+        font-weight: 300;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
 
-   .menu__holder {
-       width: 125px;
-       display: inline-flex;
-       align-items: center;
-       justify-content: center;
-       background-color: $tertiary-clr;
-   }
+    .menu__holder {
+        width: 125px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $tertiary-clr;
+    }
 
-   .menu__card:hover {
-       .menu_text {
-           transform: translate(100px, 0);
-       }
-   }
+    .menu__card:hover {
+        .menu_text {
+            transform: translate(100px, 0);
+        }
+    }
 
+    .menu__card:hover {
+        .menu__icon {
+            animation: counter-clock 500ms ease-in-out forwards;
+        }
+    }
 
-   .menu__card:hover {
-       .menu__icon {
-           animation: counter-clock 500ms ease-in-out forwards;
-       }
-   }
+    .menu__holder {
+        .menu__icon {
+            animation: clockwise 500ms ease-in-out forwards;
+        }
+    }
 
-   .menu__holder {
-       .menu__icon {
-           animation: clockwise 500ms ease-in-out forwards;
-       }
-   }
+    .menu__icon {
+        color: #fff;
+    }
 
-   .menu__icon {
-       color: #fff
-   }
+    #card-1 {
+        animation-delay: 0.1s;
+    }
 
-   #card-1 {
-       animation-delay: 0.1s;
-   }
+    #card-2 {
+        animation-delay: 0.2s;
+    }
 
-   #card-2 {
-       animation-delay: 0.2s;
-   }
+    #card-3 {
+        animation-delay: 0.3s;
+    }
 
-   #card-3 {
-       animation-delay: 0.3s;
-   }
+    #card-4 {
+        animation-delay: 0.4s;
+    }
 
-   #card-4 {
-       animation-delay: 0.4s;
-   }
+    #card-5 {
+        animation-delay: 0.5s;
+    }
 
-   #card-5 {
-       animation-delay: 0.5s;
-   }
+    #card-6 {
+        animation-delay: 0.6s;
+    }
 
-   #card-6 {
-       animation-delay: 0.6s;
-   }
+    #card-7 {
+        animation-delay: 0.7s;
+    }
 
-   #card-7 {
-       animation-delay: 0.7s;
-   }
+    #card-8 {
+        animation-delay: 0.8s;
+    }
 
-   #card-8 {
-       animation-delay: 0.8s;
-   }
+    #card-9 {
+        animation-delay: 0.9s;
+    }
 
-   #card-9 {
-       animation-delay: 0.9s;
-   }
+    .menu__order-button {
+        @include center;
+        background-color: #eaeaea;
 
-   .menu__order-button {
-       @include center;
-       background-color: #EAEAEA;
+        .order__button {
+            @include order__button;
+            padding: 13px 60px;
+        }
 
-       .order__button {
-           @include order__button;
-           padding: 13px 60px;
-       }
-
-       .order__button:hover {
-           filter:brightness(95%);
-       }
-   }
-
-
-
+        .order__button:hover {
+            filter: brightness(95%);
+        }
+    }
 }
