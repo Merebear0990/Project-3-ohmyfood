@@ -25,6 +25,8 @@
        margin: 30px 0 20px 18px;
    }
 
+
+
    .menu__card {
        width: 90%;
        margin-left: 18px;
@@ -127,13 +129,14 @@
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        flex-wrap: wrap;
     }
 
-    .menu__entrees,
-    .menu_main-dish,
-    .menu__dessert {
-        width: 400px;
-    }
+    // .menu__entrees,
+    // .menu_main-dish,
+    // .menu__dessert {
+    //     width: 400px;
+    // }
 
     .menu__options-title {
         width: 85%;

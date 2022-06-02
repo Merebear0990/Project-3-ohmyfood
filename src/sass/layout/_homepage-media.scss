@@ -40,6 +40,8 @@
        &__wrapper {
            display: flex;
            flex-direction: column;
+           justify-content: center;
+           align-items: center;
        }
 
        &__title {
@@ -48,7 +50,7 @@
 
        &__card {
            margin-left: 35px;
-        //    width: 300px;
+    
        }
 
        &__card-img-1,
@@ -61,6 +63,10 @@
        &__card-img-1 {
            object-position: left bottom;
        }
+
+    //    &__card-img-2 {
+        //    object-position: 0px -137px;
+    //    }
 
 
        &__card-img-3 {
@@ -120,6 +126,8 @@
         &__wrapper {
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         &__title {
@@ -138,23 +146,6 @@
             height: 200px;
         }
 
-        // &__card-img-1 {
-        //     object-position: 0px -165px;
-
-        // }
-
-        // &__card-img-2 {
-        //     object-position: 0px -330px;
-        // }
-
-
-        // &__card-img-3 {
-        //     object-position: 0px -175px;
-        // }
-
-        // &__card-img-4 {
-        //     object-position: 0px -175px;
-        // }
 
         &__card-icon {
             top: 80%;
@@ -217,8 +208,9 @@
            display: flex;
            flex-direction: row;
            flex-wrap: wrap;
+           margin-left: 10px;
            width: 100%;
-           align-content: space-between;
+           align-content: center;
            justify-content: center;
        }
 
@@ -227,9 +219,9 @@
        }
 
        &__card {
-           margin-left: 5%;
+           margin-left: 100px;
            margin-bottom: 20px;
-           width: 40%;
+           width: 90px;
        }
 
        &__card-img-1,
@@ -240,18 +232,7 @@
            
        }
 
-    //    &__card-img-1 {
-    //        object-position: 0px -165px;
-
-    //    }
-
-    //    &__card-img-3 {
-    //        object-position: 0px -175px;
-    //    }
-
-    //    &__card-img-4 {
-    //        object-position: 0px -175px;
-    //    }
+   
 
        &__card-icon {
            top: 76.8%;
